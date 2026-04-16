@@ -1,6 +1,12 @@
-#include <stdio.h>
+using System;
 
-int main() {
-    printf("\tHola mundo\n");
-    return 0;
+namespace HolaMundo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("¡Hola, Mundo!");
+        }
+    }
 }
