@@ -12,7 +12,7 @@
             edad = Convert.ToByte(Console.ReadLine());
 
 
-
+            
             // Ciclos
 
             if (edad >= 18)
