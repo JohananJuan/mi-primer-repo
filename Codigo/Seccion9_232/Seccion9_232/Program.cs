@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Text;
 
 namespace Seccion9_232
 {
@@ -91,8 +92,10 @@ namespace Seccion9_232
 
         public string GenerarContrasena()
         {
-            // Aqui guardamos la contrasena
-            string contrasenaGenerada = "";
+            //// Aqui guardamos la contrasena
+            //string contrasenaGenerada = "";
+
+            StringBuilder contrasenaGeneradaSB = new StringBuilder();
 
             // Instanciamos a la clase random para uysarla mas adelante
             Random random = new Random();
@@ -111,7 +114,7 @@ namespace Seccion9_232
 
             // Usamos una iteracion while para ir colocanbdo un caractes hasta completar la contrasena
 
-            while (contrasenaGenerada.Length < longitudContrasena)
+            while (contrasenaGeneradaSB.Length < longitudContrasena)
             {
                 switch(random.Next(0, 4))
                 { 
@@ -121,7 +124,7 @@ namespace Seccion9_232
                         {
                             caracterEscogido = numeros[random.Next(numeros.Length)];
                             // Se le acumula el caracter escogido por Random a la contrasena Generada
-                            contrasenaGenerada += caracterEscogido;
+                            contrasenaGeneradaSB.Append(caracterEscogido);
                             // Se aumenta en 1 a los caracteres numericos que contienen la contrasena
                             numContiene ++;
                         }
@@ -133,7 +136,7 @@ namespace Seccion9_232
                         if (minContiene < minTener)
                         {
                             caracterEscogido = letrasMin[random.Next(letrasMin.Length)];
-                            contrasenaGenerada += caracterEscogido;
+                            contrasenaGeneradaSB.Append(caracterEscogido);
                             minContiene ++;
                         }
 
@@ -144,7 +147,7 @@ namespace Seccion9_232
                         if (mayContiene < mayTener)
                         {
                             caracterEscogido = letrasMay[random.Next(letrasMay.Length)];
-                            contrasenaGenerada += caracterEscogido;
+                            contrasenaGeneradaSB.Append(caracterEscogido);
                             mayContiene ++;
                         }
 
@@ -155,7 +158,7 @@ namespace Seccion9_232
                         if (espContiene < espTener)
                         {
                             caracterEscogido = caracteresEspacial[random.Next(caracteresEspacial.Length)];
-                            contrasenaGenerada += caracterEscogido;
+                            contrasenaGeneradaSB.Append(caracterEscogido);
                             espContiene ++;
                         }
 
@@ -163,7 +166,7 @@ namespace Seccion9_232
 
                 }
             } 
-            return contrasenaGenerada;
+            return contrasenaGeneradaSB.ToString();
         }
 
         // Metodo para comprobar contrasenas
