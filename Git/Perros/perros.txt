@@ -1,1 +1,2 @@
-Este es un ejercicio de Perros
+# Este es un ejercicio de Perros
+- Estos son algunos cambios que hago para pasar mi repositorio a Local
