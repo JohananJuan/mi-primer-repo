@@ -1,3 +1,6 @@
+
 Este es un ejercicio de git 
+Este es un ajemplo para subir mi repositoria a GitHub
+
 
 
