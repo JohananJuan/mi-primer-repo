@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int suma= 3 + 2;
+            Console.WriteLine(suma);
         }
     }
 }
