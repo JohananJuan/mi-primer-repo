@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-BlogCore-2dc07edf-6638-4670-9bca-075684990907</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="10.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogCoreSolution.AccesoDatos\BlogCoreSolution.AccesoDatos.csproj" />
+  </ItemGroup>
+
+</Project>
